@@ -1,0 +1,25 @@
+<% badge.padding *= 1.2 -%>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="<%= badge.total_width * 1.2 %>" height="28">
+  <g shape-rendering="crispEdges">
+    <rect width="<%= badge.label_width * 1.2 %>" height="28" fill="<%= badge.label_color %>"/>
+    <rect x="<%= badge.label_width * 1.2 %>" width="<%= badge.value_width * 1.2 %>" height="28" fill="<%= badge.value_color %>"/>
+  </g>
+
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="100">
+    <text x="<%= badge.label_width * 6 %>" y="175" transform="scale(0.1)" textLength="<%= badge.label_text_width * 12 %>" lengthAdjust="spacing"><%= HTML.escape badge.label.upcase %></text>
+    <text x="<%= (badge.label_width * 12) + badge.value_width * 6 %>" y="175" font-weight="bold" transform="scale(0.1)" textLength="<%= badge.value_text_width * 12 %>" lengthAdjust="spacing"><%= HTML.escape badge.value.upcase %></text>
+    </g>
+
+  <% unless badge.label_link.nil? %>
+    <a target="_blank" xlink:href="<%= badge.label_link %>">
+      <rect width="<%= badge.label_width * 1.2 %>" height="28" fill="rgba(0,0,0,0)"/>
+    </a>
+  <% end %>
+
+  <% unless badge.value_link.nil? %>
+    <a target="_blank" xlink:href="<%= badge.value_link %>">
+      <rect width="<%= badge.value_width * 1.2 %>" height="28" fill="rgba(0,0,0,0)"/>
+    </a>
+  <% end %>
+</svg>

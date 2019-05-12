@@ -1,0 +1,14 @@
+name: badger
+version: 0.1.0
+license: MIT
+
+authors:
+  - Ata Kuyumcu <ata.kuyumcu@protonmail.com>
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+targets:
+  badger:
+    main: src/badger.cr
