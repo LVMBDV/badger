@@ -32,7 +32,7 @@
 
   <% unless badge.value_link.nil? %>
     <a target="_blank" xlink:href="<%= badge.value_link %>">
-      <rect width="<%= badge.value_width %>" height="20" fill="rgba(0,0,0,0)"/>
+      <rect x="<%= badge.label_width %>" width="<%= badge.value_width %>" height="20" fill="rgba(0,0,0,0)"/>
     </a>
   <% end %>
 </svg>
