@@ -1,5 +1,6 @@
 const pdfkit = require("pdfkit")
 const yaml = require("node-yaml");
+const path = require("path");
 
 const PRECISION = 0.001
 
@@ -63,4 +64,4 @@ function calculateKerning(fontFamily, fontSize) {
   process.stdout.write("}");
 }
 
-calculateKerning("fonts/DejaVuSans.ttf", 11)
+calculateKerning(path.join(__dirname, "fonts/DejaVuSans.ttf"), 11)
