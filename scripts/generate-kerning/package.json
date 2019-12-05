@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "pdfkit": "~0.8.3",
-    "node-yaml": "~3.1.1"
+    "js-yaml": "^3.13.1",
+    "node-yaml": "^4.0.1",
+    "pdfkit": "~0.8.3"
   }
 }
