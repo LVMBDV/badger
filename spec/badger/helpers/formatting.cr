@@ -1,15 +1,9 @@
 require "../../../src/helpers/formatting"
 
-module SpecHelpers::Formating
-  BUILD_STATUSES = [
-    "failed",
-    "passing",
-    "running",
-    "pending",
-    "cancelled",
-    "unknown",
-    "invalid",
-  ]
+module ::SpecHelpers::Formating
+  {% begin %}
+  BUILD_STATUSES = {{ Helpers::Color::BUILD_STATUS_COLORS.keys + ["invalid",] }}
+  {% end %}
 
   def is_build_status?(status : String) : Bool
     BUILD_STATUSES.includes?(status)

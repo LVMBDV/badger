@@ -7,3 +7,6 @@ clean:
 kerning:
 	mkdir -p ./res/data
 	node scripts/generate-kerning/generate-kerning.js > ./res/data/kerning.dat
+
+test:
+	KEMAL_ENV=test crystal spec

@@ -12,7 +12,7 @@ error 404 do |env|
   Helpers::Rendering.render_badge(Badge.not_found)
 end
 
-OptionParser.parse! do |opts|
+OptionParser.parse do |opts|
   opts.on("-p PORT", "--port PORT", "define port to run server") do |opt|
     port = opt.to_i
   end
