@@ -1,0 +1,4 @@
+language: crystal
+
+script:
+  make binary test
