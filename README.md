@@ -1,7 +1,9 @@
-# Badger
+<h3 align="center">Badger</h3>
 
-<a href="https://travis-ci.org/LVMBDV/badger" alt="Build status">
-  <img src="https://lvmbdv-badger.herokuapp.com/travis-org/LVMBDV/badger"/></a>
+<p align="center">
+  <a style="text-align: center" href="https://travis-ci.org/LVMBDV/badger" alt="Build status">
+    <img src="https://lvmbdv-badger.herokuapp.com/travis-org/LVMBDV/badger"/></a>
+</p>
 
 
 Badger is a web application that generates consistent styled project badges
